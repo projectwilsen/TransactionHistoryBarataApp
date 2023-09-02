@@ -1,0 +1,15 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/white" /> <!-- Background color -->
+            <corners android:radius="10dp" /> <!-- Adjust corner radius as needed -->
+        </shape>
+    </item>
+    <item android:right="1dp" android:left="1dp" android:top="2dp" android:bottom="3dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" /> <!-- Transparent color -->
+            <corners android:radius="10dp" /> <!-- Match the corner radius above -->
+            <stroke android:color="#D3D3D3" /> <!-- Outline color -->
+        </shape>
+    </item>
+</layer-list>

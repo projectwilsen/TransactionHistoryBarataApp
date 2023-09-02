@@ -1,0 +1,78 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="th_date">31 Agustus 2023</string>
+    <string name="th_status">selesai</string>
+    <string name="th_cs_name">Charging Station UNAIR Kampus C</string>
+    <string name="th_cs_location">Mulyorejo, Surabaya</string>
+    <string name="th_total_pengeluaran">Total pengeluaran</string>
+    <string name="th_amount">Rp 80.000</string>
+    <string name="th_pesan_lagi">Pesan lagi</string>
+
+
+    <string-array name="transaction_history_date">
+        <item>2023/08/14 13:48:49</item>
+        <item>2023/08/23 14:48:49</item>
+        <item>2023/08/16 13:49:49</item>
+        <item>2023/08/17 11:48:49</item>
+        <item>2023/08/18 12:48:49</item>
+        <item>2023/08/20 13:38:49</item>
+        <item>2023/08/20 13:18:49</item>
+        <item>2023/08/21 10:48:49</item>
+        <item>2023/08/22 12:18:49</item>
+        <item>2023/08/15 13:48:49</item>
+    </string-array>
+
+    <string-array name="transaction_history_cs_name">
+        <item>UNAIR Kampus C</item>
+        <item>UNAIR Kampus A</item>
+        <item>UNAIR Kampus B</item>
+        <item>UNAIR Kampus A</item>
+        <item>UNAIR Kampus C</item>
+        <item>UNAIR Kampus B</item>
+        <item>UNAIR Kampus C</item>
+        <item>UNAIR Kampus C</item>
+        <item>UNAIR Kampus A</item>
+        <item>UNAIR Kampus B</item>
+    </string-array>
+
+    <string-array name="transaction_history_cs_location">
+        <item>Mulyorejo, Surabaya</item>
+        <item>Tambaksari, Surabaya</item>
+        <item>Gubeng, Surabaya</item>
+        <item>Tambaksari, Surabaya</item>
+        <item>Mulyorejo, Surabaya</item>
+        <item>Gubeng, Surabaya</item>
+        <item>Mulyorejo, Surabaya</item>
+        <item>Mulyorejo, Surabaya</item>
+        <item>Tambaksari, Surabaya</item>
+        <item>Gubeng, Surabaya</item>
+    </string-array>
+
+    <string-array name="transaction_history_status">
+        <item>selesai</item>
+        <item>selesai</item>
+        <item>selesai</item>
+        <item>selesai</item>
+        <item>selesai</item>
+        <item>selesai</item>
+        <item>selesai</item>
+        <item>selesai</item>
+        <item>selesai</item>
+        <item>selesai</item>
+    </string-array>
+
+    <string-array name="transaction_history_amount">
+        <item>100000</item>
+        <item>76000</item>
+        <item>80000</item>
+        <item>90000</item>
+        <item>100000</item>
+        <item>57000</item>
+        <item>89000</item>
+        <item>100000</item>
+        <item>86000</item>
+        <item>100000</item>
+    </string-array>
+
+</resources>
