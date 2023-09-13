@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import java.text.ParseException;
@@ -16,7 +17,7 @@ import java.util.Comparator;
 import java.util.Date;
 import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements TransactionHistoryRecyclerViewInterface{
 
     ArrayList<TransactionHistoryModel> transactionHistoryModel = new ArrayList<>();
 
@@ -30,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
         setUpTransactionHistoryModel();
 
-        TransactionHistoryRecyclerViewAdapter adapter = new TransactionHistoryRecyclerViewAdapter(this,transactionHistoryModel);
+        TransactionHistoryRecyclerViewAdapter adapter = new TransactionHistoryRecyclerViewAdapter(this,transactionHistoryModel,this);
 
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -75,4 +76,16 @@ public class MainActivity extends AppCompatActivity {
         transactionHistoryModel.addAll(tempList);
     }
 
+    @Override
+    public void onItemClick(int position) {
+        Intent intent = new Intent(MainActivity.this,TransactionHistoryDetailActivity.class);
+
+        intent.putExtra("NAME", transactionHistoryModel.get(position).getTransactionHistoryCSName());
+        intent.putExtra("LOCATION", transactionHistoryModel.get(position).getTransactionHistoryCSLocation());
+        intent.putExtra("STATUS", transactionHistoryModel.get(position).getTransactionHistoryStatus());
+        intent.putExtra("DATE", transactionHistoryModel.get(position).getTransactionHistoryDate());
+        intent.putExtra("AMOUNT", transactionHistoryModel.get(position).getTransactionHistoryAmount());
+
+        startActivity(intent);
+    }
 }
