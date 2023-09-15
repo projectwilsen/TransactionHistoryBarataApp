@@ -1,11 +1,22 @@
 package com.example.myapplication;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.messaging.FirebaseMessaging;
+
+import org.w3c.dom.Text;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -20,12 +31,32 @@ import java.util.Locale;
 public class MainActivity extends AppCompatActivity implements TransactionHistoryRecyclerViewInterface{
 
     ArrayList<TransactionHistoryModel> transactionHistoryModel = new ArrayList<>();
+    EditText etToken;
 
-
+//    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+//        etToken = findViewById(R.id.token);
+
+        FirebaseMessaging.getInstance().getToken()
+                .addOnCompleteListener(new OnCompleteListener<String>() {
+                    @Override
+                    public void onComplete(@NonNull Task<String> task) {
+                        if (!task.isSuccessful()) {
+                            System.out.println("Fetching FCM registration token failed");
+                            return;
+                        }
+
+                        String token = task.getResult();
+
+                        System.out.println(token);
+//                        Toast.makeText(MainActivity.this, "Device registration token" + token, Toast.LENGTH_SHORT).show();
+//                        etToken.setText(token);
+                    }
+                });
 
         RecyclerView recyclerView = findViewById(R.id.tsRecyclerView);
 

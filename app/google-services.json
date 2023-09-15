@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "428240652591",
+    "firebase_url": "https://chargingstation-17519-default-rtdb.firebaseio.com",
+    "project_id": "chargingstation-17519",
+    "storage_bucket": "chargingstation-17519.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:428240652591:android:336a586a8741c2095539da",
+        "android_client_info": {
+          "package_name": "com.example.customerserviceapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "428240652591-deua1bq4tjratiifg1cv876snje9j83s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBc8wdkH0p86sZs0JdMSHQcsjoRldfv8Ls"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "428240652591-deua1bq4tjratiifg1cv876snje9j83s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:428240652591:android:f11b005bd524edd15539da",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "428240652591-deua1bq4tjratiifg1cv876snje9j83s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBc8wdkH0p86sZs0JdMSHQcsjoRldfv8Ls"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "428240652591-deua1bq4tjratiifg1cv876snje9j83s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
