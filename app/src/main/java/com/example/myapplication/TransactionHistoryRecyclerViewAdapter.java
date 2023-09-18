@@ -1,7 +1,6 @@
 package com.example.myapplication;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +16,11 @@ public class TransactionHistoryRecyclerViewAdapter extends RecyclerView.Adapter<
     private final TransactionHistoryRecyclerViewInterface transactionHistoryRecyclerViewInterface;
     Context context;
     ArrayList<TransactionHistoryModel> transactionHistoryModels;
+
+    public void setFilteredList(ArrayList<TransactionHistoryModel> filteredList){
+        this.transactionHistoryModels = filteredList;
+        notifyDataSetChanged();
+    }
     public TransactionHistoryRecyclerViewAdapter(Context context, ArrayList<TransactionHistoryModel> transactionHistoryModels,
                                                  TransactionHistoryRecyclerViewInterface transactionHistoryRecyclerViewInterface){
         this.context = context;
